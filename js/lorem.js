@@ -9,10 +9,8 @@ form.addEventListener("submit", (event) => {
 
   content.style.display = "block";
 
-  const countWords = lorem.value.split(" ");
-
   words.innerHTML = `The <strong>number of words</strong> in this Lorem Ipsum is <strong>${
-    countWords.filter((word) => word !== "").length
+    lorem.value.split(" ").filter((word) => word !== "").length
   }</strong>.`;
   ets.innerHTML = `The <strong>number of et's</strong> in this Lorem Ipsum is <strong>${
     lorem.value.split(" et ").length - 1

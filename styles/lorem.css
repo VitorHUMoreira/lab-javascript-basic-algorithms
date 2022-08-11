@@ -55,6 +55,10 @@ h3 {
   align-items: center;
 }
 
+form {
+  width: 100%;
+}
+
 .group-form {
   margin-top: 16px;
 }

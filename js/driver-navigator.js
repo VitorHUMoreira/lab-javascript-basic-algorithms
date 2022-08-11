@@ -29,14 +29,14 @@ form.addEventListener("submit", (event) => {
     .toUpperCase()
     .split("")
     .join(" ")
-    .replace(/\s+/g, " ")}</strong>`;
+    .replace(/\s+/g, " ")}</strong>.`;
   newNavigatorName.innerHTML = `New navigator's name is <strong>${inputNavigatorName.value
     .split("")
     .reverse()
-    .join("")}</strong>`;
+    .join("")}</strong>.`;
 
   if (inputDriverName.value < inputNavigatorName.value) {
-    lexicographicName.innerHTML = `<strong>${inputDriverName.value}</strong> goes first`;
+    lexicographicName.innerHTML = `<strong>${inputDriverName.value}</strong> goes first.`;
   } else if (inputDriverName.value > inputNavigatorName.value) {
     lexicographicName.innerHTML = `Yo, <strong>${inputNavigatorName.value}</strong> goes first definitely.`;
   } else {

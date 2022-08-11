@@ -1,36 +1,15 @@
-const inputDriverName = document.querySelector("#driver");
-const inputNavigatorName = document.querySelector("#navigator");
+const content = document.querySelector(".content");
 const form = document.querySelector(".form");
-const driverName = document.querySelector(".driverName");
-const navigatorName = document.querySelector(".navigatorName");
-const largerName = document.querySelector(".largerName");
-const newDriverName = document.querySelector(".newDriverName");
-const newNavigatorName = document.querySelector(".newNavigatorName");
+const phrase = document.querySelector("#phrase");
+const isPalindrome = document.querySelector(".isPalindrome");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  driverName.innerHTML = `The driver's name is <strong>${inputDriverName.value}</strong>`;
-  navigatorName.innerHTML = `The navigator's name is <strong>${inputNavigatorName.value}</strong>`;
+  content.style.display = "block";
 
-  if (inputDriverName.value.length > inputNavigatorName.value.length) {
-    largerName.innerHTML = `The <strong>driver</strong> has the <strong>longest name</strong>, <strong>${inputDriverName.value}</strong> has <strong>${inputDriverName.value.length} characters</strong>.`;
-  } else if (inputNavigatorName.value.length > inputDriverName.value.length) {
-    largerName.innerHTML = `It seems that the <strong>navigator</strong> has the <strong>longest name</strong>, <strong>${inputNavigatorName.value}</strong> has <strong>${inputNavigatorName.value.length} characters</strong>.`;
-  } else {
-    largerName.innerHTML = `Wow, you both have <strong>equally long names</strong>, <strong>${inputDriverName.value}</strong> and <strong>${inputNavigatorName.value}</strong> has <strong>${inputDriverName.value.length} characters</strong>!`;
-  }
-  newDriverName.innerHTML = `New driver's name: <strong>${inputDriverName.value
-    .toUpperCase()
-    .split("")
-    .join(" ")
-    .replace(/\s+/g, " ")}</strong>`;
-  newNavigatorName.innerHTML = `New navigator's name: <strong>${inputNavigatorName.value
-    .split("")
-    .reverse()
-    .join("")}</strong>`;
+  isPalindrome.innerHTML = `The phrase "<strong>${phrase.value}</strong>" is a <strong>Palindrome</strong>.`;
 
-  inputDriverName.value = "";
-  inputNavigatorName.value = "";
-  inputDriverName.focus();
+  phrase.value = "";
+  phrase.focus();
 });

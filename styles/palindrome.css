@@ -148,3 +148,7 @@ a:active {
   background: #0048ca;
   top: 2px;
 }
+
+span {
+  color: darkred;
+}

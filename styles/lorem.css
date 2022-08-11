@@ -28,6 +28,19 @@ body {
   justify-content: center;
 }
 
+img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  padding: 8px;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  margin: 8px 0;
+  background-color: lightgray;
+}
+
 .container {
   background-color: #ebf0ee;
   border: 1px solid #bbbbbb;
@@ -43,41 +56,70 @@ body {
 }
 
 .group-form {
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .group-form label {
   font-weight: 700;
-  color: #0a285f;
+  color: #0d6efd;
 }
 
 .group-form input {
   width: 100%;
   padding: 8px;
-  border: 1px solid black;
+  border: 1px solid #0d6efd;
   border-radius: 4px;
   margin: 8px 0;
+  background-color: lightgray;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+.group-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  margin: 8px 0;
+  background-color: lightgray;
+  font-family: "Poppins";
+  font-weight: 500;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 240px;
 }
 
 .group-form input[type="submit"] {
   font-family: "Poppins";
-  background-color: #0a285f;
-  font-weight: 700;
   font-size: 1rem;
-  letter-spacing: 1px;
-  color: darksalmon;
+  font-weight: 700;
+  background-color: #0d6efd;
+  color: #fff;
+  letter-spacing: 2px;
   cursor: pointer;
 }
 
+.group-form input[type="submit"]:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.group-form input[type="submit"]:active {
+  background: #0048ca;
+  top: 2px;
+}
+
 .content {
+  display: none;
+  width: 100%;
   padding: 8px;
-  background-color: grey;
+  background-color: lightgray;
   border: 1px solid black;
   border-radius: 4px;
   font-size: 1rem;
-  font-weight: 300;
   text-align: center;
-  width: 100%;
+  margin-bottom: 20px;
 }
 
 h4 {
@@ -85,14 +127,38 @@ h4 {
 }
 
 strong {
-  color: purple;
+  color: #0b5ed7;
 }
 
-.group-form input[type="submit"]:active {
-  box-shadow: inset -4px 4px 0 #221b1c;
-  font-size: 0.9rem;
+a {
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  margin: 8px 0;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 700;
 }
 
-.group-form input[type="submit"]:hover {
-  color: lightpink;
+a:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+a:active {
+  background: #0048ca;
+  top: 2px;
+}
+
+@media (max-height: 767px) {
+  .group-form textarea {
+    max-height: 100px;
+  }
 }

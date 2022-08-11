@@ -42,6 +42,11 @@ body {
   align-items: center;
 }
 
+img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
 .links {
   display: flex;
   flex-direction: column;
